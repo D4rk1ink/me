@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import Menu from './Menu'
+import Profile from './Profile'
 
 class App extends Component {
     render () {
@@ -8,6 +9,7 @@ class App extends Component {
             <div>
                 <Header />
                 <Menu />
+                <Profile />
             </div>
         )
     }
