@@ -6,7 +6,11 @@ import MenuPopup from 'src/components/MenuPopup'
 import MenuButton from 'components/MenuButton'
 
 const Wrapper = styled.div`
-    padding-top: 1vw;
+    @media only screen and (min-width: 45rem) {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+    }
 `
 
 class Menu extends Component {

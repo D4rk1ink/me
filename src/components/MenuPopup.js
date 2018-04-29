@@ -10,12 +10,13 @@ const Wrapper = styled.div`
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 0;
         width: 100%;
         height: 100%;
         background-color: ${color.back}${ (props) => props.isShow ? `F0` : `00` };
         transition: background-color .5s;
+        z-index: 98;
         > ${Fade} > * {
             margin: 10px 0 !important;
         }

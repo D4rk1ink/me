@@ -6,12 +6,12 @@ import Fade from 'react-reveal/Fade'
 const Wrapper = styled.div`
     position: absolute;
     left: 47vw;
-    bottom: 16vw;
+    bottom: 19vw;
     @media only screen and (min-width: 45rem) {
-        bottom: 11vw;
+        bottom: 45vw;
     }
     @media only screen and (min-width: 75rem) {
-        bottom: 6vw;
+        bottom: 18vw;
     }
 `
 
