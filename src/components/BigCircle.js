@@ -30,7 +30,7 @@ const BigCircle = styled.div`
     }
 `
 
-export default ({}) => {
+export default () => {
     return (
         <Wrapper>
             <Fade top>

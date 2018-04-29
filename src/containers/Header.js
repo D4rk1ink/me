@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import ImageProfileCircle from 'src/components/ImageProfileCircle'
 import HeaderTextgroup from 'src/components/HeaderTextGroup'
 import BigCircle from 'src/components/BigCircle'
-import MenuBar from 'src/components/MenuBar'
 
 const Wrapper = styled.div`
     position: relative;
@@ -15,7 +14,7 @@ const Wrapper = styled.div`
     padding-top: 1vw;
 `
 
-class App extends Component {
+class Header extends Component {
     render () {
         return (
             <Wrapper>
@@ -27,4 +26,4 @@ class App extends Component {
     }
 }
 
-export default App
+export default Header

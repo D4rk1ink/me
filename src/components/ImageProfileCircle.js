@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import color from 'src/constants/color'
 import Fade from 'react-reveal/Fade'
 import ImageProfile from 'src/images/profile.jpg'
 
@@ -25,7 +24,7 @@ const Image = styled.img`
     width: 100%;
 `
 
-export default ({}) => {
+export default () => {
     return (
         <Fade bottom>
             <Wrapper>
