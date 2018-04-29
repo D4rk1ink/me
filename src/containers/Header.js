@@ -20,13 +20,6 @@ const Wrapper = styled.div`
     }
 `
 
-const MenuWrapper = styled.div`
-    @media only screen and (min-width: 45rem) {
-        position: absolute;
-        bottom: 5vh;
-    }
-`
-
 class Header extends Component {
     render () {
         return (
@@ -34,9 +27,6 @@ class Header extends Component {
                 <BigCircle />
                 <ProfileImageCircle />
                 <HeaderTextgroup />
-                {/* <MenuWrapper>
-                    <Menu />
-                </MenuWrapper> */}
             </Wrapper>
         )
     }
