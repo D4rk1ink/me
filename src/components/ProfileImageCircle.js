@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
-import ImageProfile from 'src/images/profile.jpg'
+import ProfileImage from 'src/images/profile.jpg'
 
 const Wrapper = styled.div`
     position: relative;
@@ -28,7 +28,7 @@ export default () => {
     return (
         <Fade bottom>
             <Wrapper>
-                <Image src={ImageProfile} />
+                <Image src={ProfileImage} />
             </Wrapper>
         </Fade>
     )

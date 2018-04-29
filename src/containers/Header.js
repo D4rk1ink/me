@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import ImageProfileCircle from 'src/components/ImageProfileCircle'
+import ProfileImageCircle from 'src/components/ProfileImageCircle'
 import HeaderTextgroup from 'src/components/HeaderTextGroup'
 import BigCircle from 'src/components/BigCircle'
 
@@ -19,7 +19,7 @@ class Header extends Component {
         return (
             <Wrapper>
                 <BigCircle />
-                <ImageProfileCircle />
+                <ProfileImageCircle />
                 <HeaderTextgroup />
             </Wrapper>
         )
