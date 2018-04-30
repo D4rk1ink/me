@@ -14,7 +14,7 @@ const Wrapper = styled.div`
     padding-top: 1vw;
     background-color: ${color.azure};
     @media only screen and (min-width: 45rem) {
-        height: 100vw;
+        height: 100vh;
     }
     @media only screen and (min-width: 75rem) {
         height: 100vh;
@@ -30,7 +30,7 @@ const Content = styled.div`
     align-items: center;
     margin-bottom: 8vw;
     padding-top: 1vw;
-    @media only screen and (min-width: 45rem) {
+    @media only screen and (min-width: 75rem) {
         flex-direction: row;
     }
 `

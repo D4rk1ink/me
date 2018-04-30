@@ -14,11 +14,8 @@ const Wrapper = styled.div`
     flex: 1;
     width: 100%;
     height: 100%;
-    @media only screen and (min-width: 45rem) {
-        flex: .8;
-    }
     @media only screen and (min-width: 75rem) {
-        flex: 1;
+        flex: .7;
     }
 `
 
@@ -27,13 +24,13 @@ const ImagesWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: 30%;
     height: 100%;
     @media only screen and (min-width: 45rem) {
-        width: 40%;
+        height: 100%;
     }
     @media only screen and (min-width: 75rem) {
-        width: 40%;
+        width: 50%;
     }
 `
 
