@@ -23,11 +23,11 @@ const TopicWrapper = styled.div`
 `
 
 const Title = styled.label`
-    color: ${ color.dark };
+    color: ${ color.darkBlue };
 `
 
 const Detail = styled.label`
-    color: ${ color.dark };
+    color: ${ color.darkBlue };
 `
 
 export default () => {

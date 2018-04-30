@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h2`
-    color: ${ props => props.dark ? color.dark : color.light };
+    color: ${ props => props.dark ? color.darkBlue : color.light };
     font-size: 6rem;
     font-size: 6vw;
     font-weight: 400;
