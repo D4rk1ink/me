@@ -5,18 +5,23 @@ import ProfileImage from 'src/images/profile.jpg'
 
 const Wrapper = styled.div`
     position: relative;
-    width: 25vw;
-    height: 25vw;
+    margin: 20px 0;
+    transform: translateZ(30px);
+    
+`
+
+const Circle = styled.div`
+    width: 22vw;
+    height: 22vw;
     border-radius: 50%;
     overflow: hidden;
-    margin: 20px 0;
     @media only screen and (min-width: 45rem) {
         width: 18vw;
         height: 18vw;
     }
     @media only screen and (min-width: 75rem) {
-        width: 12vw;
-        height: 12vw;
+        width: 13vw;
+        height: 13vw;
     }
 `
 
@@ -26,10 +31,12 @@ const Image = styled.img`
 
 export default () => {
     return (
-        <Fade bottom>
-            <Wrapper>
-                <Image src={ProfileImage} />
-            </Wrapper>
-        </Fade>
+        <Wrapper>
+            <Fade bottom>
+                <Circle>
+                    <Image src={ProfileImage} />
+                </Circle>
+            </Fade>
+        </Wrapper>
     )
 }

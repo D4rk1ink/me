@@ -7,6 +7,7 @@ const Wrapper = styled.div`
     text-align: center;
     position: relative;
     color: ${color.light};
+    transform: translateZ(30px);
 `
 
 const Title = styled.h1`
