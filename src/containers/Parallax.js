@@ -25,12 +25,16 @@ class Parallax extends Component {
             const y = event.y
             const windowWidth = event.view.innerWidth
             const windowHeight = event.view.innerHeight
-            const rotateX = y / windowWidth * 10
-            const rotateY = x / windowHeight * -5
+            const rotateX = (y - windowWidth / 2) / windowWidth * 10
+            const rotateY = (x - windowHeight / 2) / windowHeight * -5
             ParallaxElements.forEach(el => {
                 el.style = `transform: rotateX(${ rotateX }deg) rotateY(${ rotateY }deg); transform-style: preserve-3d;`
             })
         })
+    }
+
+    componentWillUnmount () {
+        document.removeEventListener('mousemove')
     }
 
     render () {
