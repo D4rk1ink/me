@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import color from 'src/constants/color'
 import Fade from 'react-reveal/Fade'
 import MenuItem from './MenuItem'
 
 const Wrapper = styled.div`
+    visibility: ${ ({ visible }) => visible ? 'visible' : 'hidden' };
     @media only screen and (max-width: 45rem) {
         display: flex;
         justify-content: center;
@@ -26,23 +27,46 @@ const Wrapper = styled.div`
 const MenuItemWrapper = styled.div`
 `
 
-export default ({ items, isMobileSize, isShow, onClose }) => {
-    return (
-        <Wrapper isShow={isShow}>
-            {
-                items.map((item, i) => {
-                    let props = {}
-                    props[(i % 2 === 0) ? 'left' : 'right' ] = true
-                    props['when'] = isShow
-                    return (
-                        <Fade { ...props } key={i}>
-                            <MenuItemWrapper onClick={ () => onClose(false) }>
-                                <MenuItem title={item} />
-                            </MenuItemWrapper>
-                        </Fade>
-                    )
-                })
+class MenuPopup extends Component {
+
+    constructor (props) {
+        super(props)
+        this.timeOut = null
+        this.state = {
+            visible: false
+        }
+    }
+
+    render () {
+        if (this.state.visible && !this.props.isShow) {
+            this.timeOut = setTimeout(() => {
+                this.setState({ visible: false })
+            }, 1000)
+        } else if (!this.state.visible && this.props.isShow) {
+            if (this.timeOut) {
+                clearTimeout(this.timeOut)
             }
-        </Wrapper>
-    )
+            this.setState({ visible: true })
+        }
+        return (
+            <Wrapper isShow={this.props.isShow} visible={this.state.visible}>
+                {
+                    this.props.items.map((item, i) => {
+                        let props = {}
+                        props[(i % 2 === 0) ? 'left' : 'right' ] = true
+                        props['when'] = this.props.isShow
+                        return (
+                            <Fade { ...props } key={i}>
+                                <MenuItemWrapper onClick={ () => this.props.onClose(false) }>
+                                    <MenuItem title={item} />
+                                </MenuItemWrapper>
+                            </Fade>
+                        )
+                    })
+                }
+            </Wrapper>
+        )
+    }
 }
+
+export default MenuPopup
