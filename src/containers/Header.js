@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Menu from './Menu'
-import ProfileImageCircle from 'src/components/ProfileImageCircle'
+import MainImageCircle from 'src/components/MainImageCircle'
 import HeaderTextgroup from 'src/components/HeaderTextGroup'
 import BigCircle from 'src/components/BigCircle'
 
@@ -25,7 +25,7 @@ class Header extends Component {
         return (
             <Wrapper id={'parallax'}>
                 <BigCircle />
-                <ProfileImageCircle />
+                <MainImageCircle />
                 <HeaderTextgroup />
             </Wrapper>
         )
