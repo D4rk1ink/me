@@ -25,8 +25,8 @@ const Ghost = styled.div`
 
 export default ({ minSize = 2, maxSize = 10 }) => {
     const size = Math.random() * (maxSize - minSize) + minSize
-    const x = Math.random() * (100 - 0) + 0
-    const y = Math.random() * (100 - 0) + 0
+    const x = Math.random() * (140 - -40) + 0
+    const y = Math.random() * (140 - -40) + 0
     const z = Math.random() * (20 - 0) + 0
     const opacity = (Math.random() * (80 - 50) + 50) / 100
     return (
