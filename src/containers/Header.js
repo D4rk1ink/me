@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 class Header extends Component {
     render () {
         return (
-            <Wrapper>
+            <Wrapper id={'parallax'}>
                 <BigCircle />
                 <ProfileImageCircle />
                 <HeaderTextgroup />

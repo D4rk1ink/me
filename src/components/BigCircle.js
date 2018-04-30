@@ -7,8 +7,9 @@ const Wrapper = styled.div`
     position: absolute;
     left: 47vw;
     bottom: 19vw;
+    transform: translateZ(-5vw);
     @media only screen and (min-width: 45rem) {
-        bottom: 45vw;
+        bottom: 18vw;
     }
     @media only screen and (min-width: 75rem) {
         bottom: 18vw;
