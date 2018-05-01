@@ -4,5 +4,6 @@ export default {
     dark: '#0B0C10',
     darkBlue: '#283746',
     light: '#C5C6C7',
-    azure: '#E7FFFF'
+    azure: '#E7FFFF',
+    orangePeel: '#f09b00'
 }
