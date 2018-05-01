@@ -26,7 +26,7 @@ const BaseCircle = styled.div`
     width: 100%;
     height: 100%;
     border: .5vw solid ${color.light};
-    transform: translateZ(-50px);
+    transform: translateZ(30px);
 `
 
 const CircularWrapper = styled.svg`

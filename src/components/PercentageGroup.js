@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 const Text = styled.label`
     margin: 7vw;
     font-size: 2.5vw;
-    transform: translateZ(0px);
+    transform: translateZ(30px);
     font-weight: 200;
     @media only screen and (min-width: 75rem) {
         margin: 0px;
