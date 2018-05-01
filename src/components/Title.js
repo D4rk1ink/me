@@ -29,7 +29,7 @@ export default ({ title, dark, light }) => {
     return (
         <Wrapper>
             <Fade bottom>
-                <Title dark light>
+                <Title dark={dark} light={light}>
                     { title }
                 </Title>
             </Fade>

@@ -4,6 +4,7 @@ import ParticlePanel from './ParticlePanel'
 import Header from './Header'
 import Menu from './Menu'
 import Profile from './Profile'
+import Skills from './Skills'
 
 class App extends Component {
     render () {
@@ -13,6 +14,7 @@ class App extends Component {
                 <Header />
                 <Menu />
                 <Profile />
+                <Skills />
                 <Parallax />
             </div>
         )
