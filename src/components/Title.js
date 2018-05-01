@@ -16,25 +16,31 @@ const TextWrapper = styled.div`
 
 const Text = styled.h2`
     color: ${ props => props.dark ? color.darkBlue : color.light };
-    font-size: 6rem;
-    font-size: 6vw;
+    font-size: 5rem;
+    font-size: 5vw;
     font-weight: 400;
     text-transform: uppercase;
     @media only screen and (min-width: 45rem) {
-        font-size: 4rem;
-        font-size: 4vw;
+        font-size: 3.5rem;
+        font-size: 3.5vw;
     }
     @media only screen and (min-width: 75rem) {
-        font-size: 3rem;
-        font-size: 3vw;
+        font-size: 2.5rem;
+        font-size: 2.5vw;
     }
 `
 
 const Line = styled.div`
     width: ${ ({ width }) => width }%;
-    height: 5px;
+    height: 2px;
     background-color: ${color.orangePeel};
     transition: width 1s;
+    @media only screen and (min-width: 45rem) {
+        height: 3px;
+    }
+    @media only screen and (min-width: 75rem) {
+        height: 4px;
+    }
 `
 
 class Title extends Component {
