@@ -15,26 +15,29 @@ class Parallax extends Component {
 
     constructor (props) {
         super(props)
-        this.size = Math.round(Math.random() * (150 - 100) + 100)
+        this.parallaxElements = null
+        this.handleMouseMove = this.handleMouseMove.bind(this)
     }
 
     componentDidMount () {
-        const ParallaxElements = document.querySelectorAll('#parallax')
-        const mousemove = document.addEventListener('mousemove', (event) => {
-            const x = event.x
-            const y = event.y
-            const windowWidth = event.view.innerWidth
-            const windowHeight = event.view.innerHeight
-            const rotateX = (y - windowWidth / 2) / windowWidth * 10
-            const rotateY = (x - windowHeight / 2) / windowHeight * -5
-            ParallaxElements.forEach(el => {
-                el.style = `transform: rotateX(${ rotateX }deg) rotateY(${ rotateY }deg); transform-style: preserve-3d;`
-            })
-        })
+        this.parallaxElements = document.querySelectorAll('#parallax')
+        document.addEventListener('mousemove', this.handleMouseMove)
     }
 
     componentWillUnmount () {
-        document.removeEventListener('mousemove')
+        document.removeEventListener('mousemove', this.handleMouseMove, true)
+    }
+
+    handleMouseMove (event) {
+        const x = event.x
+        const y = event.y
+        const windowWidth = event.view.innerWidth
+        const windowHeight = event.view.innerHeight
+        const rotateX = (y - windowHeight / 2) / windowHeight * -7
+        const rotateY = (x - windowWidth / 2) / windowWidth * 7
+        this.parallaxElements.forEach(el => {
+            el.style = `transform: rotateX(${ rotateX }deg) rotateY(${ rotateY }deg); transform-style: preserve-3d;`
+        })
     }
 
     render () {
