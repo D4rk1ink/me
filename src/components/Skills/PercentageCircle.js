@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled, { keyframes  } from 'styled-components'
-import color from 'src/constants/color'
 import WayPoint from 'react-waypoint'
+import color from 'src/constants/color'
 
 const Wrapper = styled.div`
     position: relative;
@@ -11,8 +11,8 @@ const Wrapper = styled.div`
     width: 18vw;
     height: 18vw;
     @media only screen and (min-width: 45rem) {
-        width: 17vw;
-        height: 17vw;
+        width: 15vw;
+        height: 15vw;
     }
     @media only screen and (min-width: 75rem) {
         width: 10vw;
@@ -40,7 +40,7 @@ const Path = styled.path`
     ${
         ({ animate, percent }) => (animate) ? `animation: progress-${percent} 1s ease-out forwards;` : ``
     }
-    animation-delay: .2s;
+    animation-delay: .4s;
     @keyframes progress-${ ({ percent}) => percent } {
         100% {
             stroke-dasharray: ${ ({ percent}) => percent } 100;
