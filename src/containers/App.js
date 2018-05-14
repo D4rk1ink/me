@@ -5,6 +5,7 @@ import Header from './Header'
 import Menu from './Menu'
 import Profile from './Profile'
 import Skills from './Skills'
+import Works from './Works'
 
 class App extends Component {
     render () {
@@ -15,6 +16,7 @@ class App extends Component {
                 <Menu />
                 <Profile />
                 <Skills />
+                <Works />
                 <Parallax />
             </div>
         )
