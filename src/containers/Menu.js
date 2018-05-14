@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Media from 'react-media'
-import MenuBar from 'src/components/MenuBar'
-import MenuPopup from 'src/components/MenuPopup'
-import MenuButton from 'components/MenuButton'
+import MenuBar from 'src/components/Menu/MenuBar'
+import MenuPopup from 'src/components/Menu/MenuPopup'
+import MenuButton from 'components/Menu/MenuButton'
 
 const Wrapper = styled.div`
-    @media only screen and (min-width: 45rem) {
+    @media only screen and (min-width: 75rem) {
         position: absolute;
         bottom: 50px;
         width: 100%;
@@ -30,18 +30,22 @@ class Menu extends Component {
     render () {
         return (
             <Wrapper>
-                <MenuButton isActive={ this.state.isMenuShow } handelButton={ this.setIsMenuShow.bind(this) } />
-                <Media query={'(max-width: 45rem)'}>
+                <Media query={'(min-width: 75rem)'}>
                     {
                         matches => {
-                            if (matches) {
+                            if (!matches) {
                                 const props = {
                                     items: this.items,
                                     isMobileSize: true,
                                     isShow: this.state.isMenuShow,
                                     onClose: this.setIsMenuShow.bind(this)
                                 }
-                                return <MenuPopup {...props}/>
+                                return (
+                                    <div>
+                                        <MenuButton isActive={ this.state.isMenuShow } handelButton={ this.setIsMenuShow.bind(this) } />
+                                        <MenuPopup {...props}/>
+                                    </div>
+                                )
                             } else {
                                 return <MenuBar items={this.items} />
                             }

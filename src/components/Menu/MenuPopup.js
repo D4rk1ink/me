@@ -5,22 +5,24 @@ import Fade from 'react-reveal/Fade'
 import MenuItem from './MenuItem'
 
 const Wrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
     visibility: ${ ({ visible }) => visible ? 'visible' : 'hidden' };
-    @media only screen and (max-width: 45rem) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: ${color.back}${ (props) => props.isShow ? `F0` : `00` };
-        transition: background-color .5s;
-        z-index: 98;
-        > ${Fade} > * {
-            margin: 10px 0 !important;
-        }
+    font-size: 3.5vw;
+    background-color: ${color.back}${ (props) => props.isShow ? `F0` : `00` };
+    transition: background-color .5s;
+    z-index: 98;
+    > ${Fade} > * {
+        margin: 10px 0 !important;
+    }
+    @media only screen and (min-width: 45rem) {
+        font-size: 2.5vw;
     }
 `
 
