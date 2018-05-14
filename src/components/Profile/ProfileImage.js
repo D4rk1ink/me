@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import color from 'src/constants/color'
 import Fade from 'react-reveal/Fade'
-import ParallaxImage from './ParallaxImage'
+import color from 'src/constants/color'
+import ParallaxImage from 'src/components/ParallaxImage'
 import FramePNG from 'src/images/frame.png'
 import FrameShadowPNG from 'src/images/frame-shadow.png'
 import MarioPNG from 'src/images/mario-front.png'
@@ -17,9 +17,8 @@ const Wrapper = styled.div`
         height: 60vw;
     }
     @media only screen and (min-width: 75rem) {
-        flex: 1;
         height: 100%;
-        flex: .7;
+        flex: .5;
     }
 `
 

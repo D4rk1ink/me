@@ -8,6 +8,10 @@ const Wrapper = styled.div`
     text-align: center;
     padding: 0 5vw;
     @media only screen and (min-width: 45rem) {
+        text-align: center;
+        padding: 0 2vw;
+    }
+    @media only screen and (min-width: 75rem) {
         text-align: left;
         padding: 0 2vw;
     }
@@ -19,19 +23,23 @@ const TopicWrapper = styled.div`
     font-size: 3vw;
     font-weight: 200;
     @media only screen and (min-width: 45rem) {
+        font-size: 2rem;
+        font-size: 2vw;
+    }
+    @media only screen and (min-width: 75rem) {
         font-size: 1.5rem;
         font-size: 1.5vw;
     }
 `
 
 const Title = styled.label`
-    color: ${ color.darkBlue };
+    color: ${ color.azure };
     padding-right: 2vw;
     font-weight: 300;
 `
 
 const Detail = styled.label`
-    color: ${ color.darkBlue };
+    color: ${ color.azure };
 `
 
 export default () => {
