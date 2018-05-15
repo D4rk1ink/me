@@ -17,7 +17,7 @@ const BackgroundWrapper = styled.div`
 `
 
 const Background = styled.img`
-    height: 100vh;
+    ${ ({ isFullWidth }) => isFullWidth ? 'width: 100vw' : 'height: 100vh' };
 `
 
 const ParticleWrapper = styled.div`
@@ -30,13 +30,14 @@ class Header extends Component {
     constructor (props) {
         super(props)
         this.size = Math.round(Math.random() * (200 - 100) + 100)
+        this.isFullWidth = window.innerWidth / window.innerHeight > 1.77
     }
 
     render () {
         return (
             <Wrapper>
                 <BackgroundWrapper>
-                    <Background src={BackgroundPNG}/>
+                    <Background src={BackgroundPNG} isFullWidth={this.isFullWidth}/>
                 </BackgroundWrapper>
                 <ParticleWrapper id={'parallax'}>
                     {
