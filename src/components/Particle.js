@@ -9,7 +9,7 @@ const Particle = styled.div`
     background-color: #FFFFFF;
     opacity: ${ ({ opacity }) => opacity };
     transition: opacity .5s;
-    animation: move-${ ({ move }) => move.key } 130s infinite;
+    animation: move-${ ({ move }) => move.key } 30s infinite;
     @keyframes move-${ ({ move }) => move.key } {
         0% {
             transform: ${ ({ move }) => `translate(${move.a.x}vw, ${move.a.y}vh)`};
@@ -35,37 +35,52 @@ const Ghost = styled.div`
     width: ${ ({ size }) => size }px;
     height: ${ ({ size }) => size }px;
     background-color: #00000000;
-    transform: ${ ({ location }) => `translateZ(${location.z}vw)`};
+    transform: ${ ({ location }) => `translate3d(0vw, 0vh, ${location.z}vw)`};
+    animation: initParticle-${ ({ location }) => location.key } 3s forwards;
+    @keyframes initParticle-${ ({ location }) => location.key } {
+        0% {
+            opacity: 0;
+            transform: ${ ({ location }) => `translate3d(0vw, 0vh, ${location.z}vw)`};
+        }
+        100% {
+            opacity: 1;
+            transform: ${ ({ location }) => `translate3d(${location.x}vw, ${location.y}vh, ${location.z}vw)`};
+        }
+    }
     
 `
 
 export default ({ minSize = 1, maxSize = 4 }) => {
     const size = Math.random() * (maxSize - minSize) + minSize
-    const x = Math.random() * (140 - -40) + -40
-    const y = Math.random() * (140 - -40) + -40
+    const x = Math.random() * (60 - -60) + -60
+    const y = Math.random() * (60 - -60) + -60
     const z = Math.random() * (20 - 0) + 0
     const opacity = (Math.random() * (80 - 50) + 50) / 100
+    const location = {
+        key: Math.floor(Math.random() * 1e+10),
+        x, y, z
+    }
     const move = {
         key: Math.floor(Math.random() * 1e+10),
         a: {
-            x: x,
-            y: y
+            x: 0,
+            y: 0
         },
         b: {
-            x: x + Math.random() * (50 - -50) + -50,
-            y: y + Math.random() * (50 - -50) + -50
+            x: Math.random() * 5,
+            y: Math.random() * 5
         },
         c: {
-            x: x + Math.random() * (50 - -50) + -50,
-            y: y + Math.random() * (50 - -50) + -50
+            x: Math.random() * 5,
+            y: Math.random() * 5
         },
         d: {
-            x: x,
-            y: y
+            x: 0,
+            y: 0
         },
     }
     return (
-        <Ghost size={size * 20} location={{x,y,z}}>
+        <Ghost size={size * 20} location={location}>
             <Particle size={size} opacity={opacity} move={move}/>
         </Ghost>
     )

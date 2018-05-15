@@ -5,6 +5,9 @@ import Particle from 'src/components/Particle'
 import BackgroundPNG from 'src/images/bg.png'
 
 const Wrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -13,31 +16,42 @@ const Wrapper = styled.div`
 
 const BackgroundWrapper = styled.div`
     position: absolute;
-    top: 0;
 `
 
-const Background = styled.img`
+const BackgroundImage = styled.img`
     ${ ({ isFullWidth }) => isFullWidth ? 'width: 100vw' : 'height: 100vh' };
+`
+
+const BackgroundOverlay = styled.div`
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#ffffff00, #000000fc);
 `
 
 const ParticleWrapper = styled.div`
     position: absolute;
-    top: 0;
 `
 
 class Header extends Component {
 
     constructor (props) {
         super(props)
-        this.size = Math.round(Math.random() * (200 - 100) + 100)
+        this.size = 40
         this.isFullWidth = window.innerWidth / window.innerHeight > 1.77
+    }
+
+    shouldComponentUpdate () {
+        return false
     }
 
     render () {
         return (
             <Wrapper>
                 <BackgroundWrapper>
-                    <Background src={BackgroundPNG} isFullWidth={this.isFullWidth}/>
+                    <BackgroundImage src={BackgroundPNG} isFullWidth={this.isFullWidth}/>
+                    <BackgroundOverlay />
                 </BackgroundWrapper>
                 <ParticleWrapper id={'parallax'}>
                     {
