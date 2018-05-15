@@ -67,15 +67,15 @@ const TextLoading = styled.label`
 export default ({ isLoading }) => {
     return (
         <Wrapper>
-            <Fade when={isLoading}>
+            <Fade collapse when={isLoading}>
                 <Background />
             </Fade>
-            <Fade top when={isLoading}>
+            <Fade collapse top when={isLoading}>
                 <ImageWrapper>
                     <Image src={UfoSVG} />
                 </ImageWrapper>
             </Fade>
-            <Fade bottom when={isLoading}>
+            <Fade collapse bottom when={isLoading}>
                 <TextLoading>
                     Loading...
                 </TextLoading>
