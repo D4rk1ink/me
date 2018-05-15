@@ -1,26 +1,26 @@
 import React, { Component } from 'react'
-import Parallax from './Parallax'
-import ParticlePanel from './ParticlePanel'
-import Header from './Header'
-import Menu from './Menu'
-import Profile from './Profile'
-import Skills from './Skills'
-import Works from './Works'
+import { connect } from 'react-redux'
+import Loadable from 'react-loadable'
+import Loading from 'src/components/Loading'
+
+const LoadableComponent = Loadable({
+    loader: () => import('./Main'),
+    loading: () => (<div></div>)
+})
 
 class App extends Component {
     render () {
         return (
             <div>
-                <ParticlePanel />
-                <Header />
-                <Menu />
-                <Profile />
-                <Skills />
-                <Works />
-                <Parallax />
+                <Loading isLoading={this.props.isLoading} />
+                <LoadableComponent />
             </div>
         )
     }
 }
 
-export default App
+const mapStateToProps = state => {
+    return { isLoading: state.app.isLoading }
+}
+
+export default connect(mapStateToProps)(App)
