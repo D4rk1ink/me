@@ -7,6 +7,9 @@ const Wrapper = styled.div`
     text-align: center;
     position: relative;
     color: ${color.light};
+`
+
+const FadeWrapper = styled.div`
     transform: translateZ(30px);
 `
 
@@ -46,17 +49,19 @@ const SubTitle = styled.h3`
 
 export default () => {
     return (
-        <Wrapper>
-            <Fade left>
-                <Title>
-                    MY PORTFOLIO
-                </Title>
-            </Fade>
-            <Fade right>
-                <SubTitle>
-                    This is my story
-                </SubTitle>
-            </Fade>
+        <Wrapper id={'parallax'}>
+            <FadeWrapper>
+                <Fade left>
+                    <Title>
+                        MY PORTFOLIO
+                    </Title>
+                </Fade>
+                <Fade right>
+                    <SubTitle>
+                        This is my story
+                    </SubTitle>
+                </Fade>
+            </FadeWrapper>
         </Wrapper>
     )
 }

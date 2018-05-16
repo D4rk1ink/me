@@ -12,7 +12,7 @@ const Wrapper = styled(StoryWrapper)`
 class Header extends Component {
     render () {
         return (
-            <Wrapper id={'parallax'}>
+            <Wrapper>
                 <ParallaxScroll src={ImageSVG} x={70} y={25} />
                 <HeaderTextgroup />
             </Wrapper>
