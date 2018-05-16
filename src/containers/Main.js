@@ -9,6 +9,7 @@ import Menu from './Menu'
 import Profile from './Profile'
 import Skills from './Skills'
 import Works from './Works'
+import Contents from './Contents'
 
 const Content = styled.div`
 `
@@ -43,6 +44,7 @@ class Main extends Component {
                                 <Profile />
                                 <Skills />
                                 <Works />
+                                <Contents />
                             </Content>
                         )
                     : false
