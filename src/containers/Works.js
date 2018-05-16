@@ -7,6 +7,8 @@ import AnonymockPNG from 'src/images/anonymock.png'
 import YwcPNG from 'src/images/ywc.png'
 import CropTopPNG from 'src/images/croptop.png'
 import ShoesShopPNG from 'src/images/shoesshop.png'
+import ParallaxScroll from 'src/components/ParallaxScroll'
+import ImageSVG from 'src/images/stars.svg'
 
 const Wrapper = styled(StoryWrapper)`
     overflow: hidden;
@@ -56,6 +58,7 @@ class Header extends Component {
     render () {
         return (
             <Wrapper>
+                <ParallaxScroll src={ImageSVG} x={70} y={20} />
                 <Title title={'Works'} light />
                 <WorkSlide items={this.state.items} />
             </Wrapper>
