@@ -15,12 +15,14 @@ const Wrapper = styled.div`
 
 const Text = styled.label`
     margin-top: 10px;
-    font-size: 2.5vw;
+    font-size: 3vw;
     transform: translateZ(30px);
-    @media only screen and (min-width: 75rem) {
-        margin: 0px;
+    @media only screen and (min-width: 45rem) {
         margin-top: 20px;
         font-size: 2vw;
+    }
+    @media only screen and (min-width: 75rem) {
+        font-size: 1.5vw;
     }
 `
 
