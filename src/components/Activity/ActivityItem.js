@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import FontAwesome from 'react-fontawesome'
 import color from 'src/constants/color'
 import Fade from 'react-reveal/Fade'
 
