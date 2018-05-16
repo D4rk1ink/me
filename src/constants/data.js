@@ -9,7 +9,7 @@ export const menu = {
 }
 
 export const header = {
-    title: 'WEL TO MY WEBSITE',
+    title: 'WELCOME TO MY WEBSITE',
     sub: 'Let\'s get to know me'
 }
 
