@@ -17,6 +17,10 @@ const Wrapper = styled.div`
     }
 `
 
+const FadeWrapper = styled.div`
+    transform: translateZ(30px);
+`
+
 const TopicWrapper = styled.div`
     margin: 10px 0;
     font-size: 3rem;
@@ -44,43 +48,45 @@ const Detail = styled.label`
 
 export default () => {
     return (
-        <Wrapper>
-            <Fade right cascade>
-                <div>
-                    <TopicWrapper>
-                        <Title>
-                            Name
-                        </Title>
-                        <Detail>
-                            Passakorn Rattanaprapan
-                        </Detail>
-                    </TopicWrapper>
-                    <TopicWrapper>
-                        <Title>
-                            Date of Birth
-                        </Title>
-                        <Detail>
-                            1 November 1995
-                        </Detail>
-                    </TopicWrapper>
-                    <TopicWrapper>
-                        <Title>
-                            Email
-                        </Title>
-                        <Detail>
-                            passakornworking@gmail.com
-                        </Detail>
-                    </TopicWrapper>
-                    <TopicWrapper>
-                        <Title>
-                            Education
-                        </Title>
-                        <Detail>
-                            Software Engineering, Prince of Songkla University
-                        </Detail>
-                    </TopicWrapper>
-                </div>
-            </Fade>
+        <Wrapper id={'parallax'}>
+            <FadeWrapper>
+                <Fade right cascade>
+                    <div>
+                        <TopicWrapper>
+                            <Title>
+                                Name
+                            </Title>
+                            <Detail>
+                                Passakorn Rattanaprapan
+                            </Detail>
+                        </TopicWrapper>
+                        <TopicWrapper>
+                            <Title>
+                                Date of Birth
+                            </Title>
+                            <Detail>
+                                1 November 1995
+                            </Detail>
+                        </TopicWrapper>
+                        <TopicWrapper>
+                            <Title>
+                                Email
+                            </Title>
+                            <Detail>
+                                passakornworking@gmail.com
+                            </Detail>
+                        </TopicWrapper>
+                        <TopicWrapper>
+                            <Title>
+                                Education
+                            </Title>
+                            <Detail>
+                                Software Engineering, Prince of Songkla University
+                            </Detail>
+                        </TopicWrapper>
+                    </div>
+                </Fade>
+            </FadeWrapper>
         </Wrapper>
     )
 }
