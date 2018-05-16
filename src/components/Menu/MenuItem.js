@@ -4,6 +4,11 @@ import color from 'src/constants/color'
 import Fade from 'react-reveal/Fade'
 
 const Wrapper = styled.div`
+    &:hover ${Label} {
+        background: linear-gradient(to right, ${color.royal}, ${color.sky});
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 `
 
 const Label = styled.label`
@@ -16,7 +21,7 @@ const LineWrapper = styled.div`
 const Line = styled.div`
     margin: 2px 0;
     height: 1px;
-    background-color: ${color.light};
+    background: linear-gradient(to right, ${color.royal}, ${color.sky});
 `
 
 export default class MenuItem extends Component {
