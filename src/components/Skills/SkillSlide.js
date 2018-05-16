@@ -61,8 +61,8 @@ export default ({ items }) => {
                         items.map((item, i) => {
                             const fade = (i % 2 === 0) ? { top: true } : { bottom: true }
                             return (
-                                <Fade {...fade}>
-                                    <SkillItem item={item} key={i}></SkillItem>
+                                <Fade {...fade} key={i}>
+                                    <SkillItem item={item}></SkillItem>
                                 </Fade>
                             )
                         })

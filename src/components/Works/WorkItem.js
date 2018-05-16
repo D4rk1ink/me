@@ -96,8 +96,8 @@ export default ({ item }) => {
                 </Name>
                 <TechList>
                     {
-                        item.tech.split('|').map(tech => {
-                            return <Tech className={`icon-${tech}`} />
+                        item.tech.split('|').map((tech, i) => {
+                            return <Tech key={i} className={`icon-${tech}`} />
                         })
                     }
                 </TechList>

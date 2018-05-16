@@ -61,8 +61,8 @@ export default ({ items }) => {
                         items.map((item, i) => {
                             const fade = (i % 2 === 0) ? { top: true } : { bottom: true }
                             return (
-                                <Fade {...fade}>
-                                    <WorkItem item={item} key={i}></WorkItem>
+                                <Fade {...fade} key={i}>
+                                    <WorkItem item={item}></WorkItem>
                                 </Fade>
                             )
                         })

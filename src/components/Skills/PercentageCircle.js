@@ -75,8 +75,8 @@ class PercenttageCircle extends Component {
                     <CircularWrapper viewBox={'0 0 36 36'}>
                         <defs>
                             <linearGradient id={`linear`}>
-                                <stop offset={0}   stop-color={color.royal} />
-                                <stop offset={100} stop-color={color.green} />
+                                <stop offset={0}   stopColor={color.royal} />
+                                <stop offset={100} stopColor={color.green} />
                             </linearGradient>
                         </defs>
                         <Path animate={this.state.animate} percent={this.props.percent}

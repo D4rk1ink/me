@@ -49,9 +49,9 @@ class Profile extends Component {
                         data.activity.map((item, i) => {
                             const fade = (i % 2 === 0) ? { top: true } : { bottom: true }
                             return (
-                                <ActivityWrapper>
+                                <ActivityWrapper key={i}>
                                     <Fade {...fade}>
-                                        <ActivityItem key={i} item={item} />
+                                        <ActivityItem item={item} />
                                     </Fade>
                                 </ActivityWrapper>
                             )
