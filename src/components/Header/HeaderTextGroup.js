@@ -11,9 +11,12 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h1`
+    background: linear-gradient(to right, ${color.royal}, ${color.sky});
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 6rem;
     font-size: 6vw;
-    font-weight: 100;
+    font-weight: 600;
     @media only screen and (min-width: 45rem) {
         font-size: 5rem;
         font-size: 5vw;
@@ -25,6 +28,9 @@ const Title = styled.h1`
 `
 
 const SubTitle = styled.h3`
+    background: linear-gradient(to right, ${color.royal}, ${color.sky});
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 4rem;
     font-size: 4vw;
     font-weight: 400;
