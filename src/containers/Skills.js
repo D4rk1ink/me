@@ -5,6 +5,7 @@ import Title from 'src/components/Title'
 import SkillSlide from 'src/components/Skills/SkillSlide'
 import ParallaxScroll from 'src/components/ParallaxScroll'
 import ImageSVG from 'src/images/moon.svg'
+import * as data from 'src/constants/data'
 
 const Wrapper = styled(StoryWrapper)`
     overflow: hidden;
@@ -12,40 +13,12 @@ const Wrapper = styled(StoryWrapper)`
 
 class Profile extends Component {
 
-    constructor (props) {
-        super(props)
-        this.state = {
-            skills: [
-                {
-                    name: 'REACT',
-                    percent: 50
-                },
-                {
-                    name: 'ANGULAR',
-                    percent: 60
-                },
-                {
-                    name: 'EXPRESS',
-                    percent: 40
-                },
-                {
-                    name: 'BOOTSTRAP',
-                    percent: 70
-                },
-                {
-                    name: 'PYTHON',
-                    percent: 30
-                },
-            ]
-        }
-    }
-
     render () {
         return (
             <Wrapper>
                 <ParallaxScroll src={ImageSVG} x={20} y={70} />
                 <Title title={'Programming Skills'} light />
-                <SkillSlide items={this.state.skills} />
+                <SkillSlide items={data.skills} />
             </Wrapper>
         )
     }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import color from 'src/constants/color'
 import Fade from 'react-reveal/Fade'
+import * as data from 'src/constants/data'
 
 const Wrapper = styled.div`
     flex: 1;
@@ -52,38 +53,17 @@ export default () => {
             <FadeWrapper>
                 <Fade right cascade>
                     <div>
-                        <TopicWrapper>
-                            <Title>
-                                Name
-                            </Title>
-                            <Detail>
-                                Passakorn Rattanaprapan
-                            </Detail>
-                        </TopicWrapper>
-                        <TopicWrapper>
-                            <Title>
-                                Date of Birth
-                            </Title>
-                            <Detail>
-                                1 November 1995
-                            </Detail>
-                        </TopicWrapper>
-                        <TopicWrapper>
-                            <Title>
-                                Email
-                            </Title>
-                            <Detail>
-                                passakornworking@gmail.com
-                            </Detail>
-                        </TopicWrapper>
-                        <TopicWrapper>
-                            <Title>
-                                Education
-                            </Title>
-                            <Detail>
-                                Software Engineering, Prince of Songkla University
-                            </Detail>
-                        </TopicWrapper>
+                        {
+                            data.profile.map((detail, i) => {
+                                return (
+                                    <TopicWrapper key={i}>
+                                        <Detail>
+                                            { detail }
+                                        </Detail>
+                                    </TopicWrapper>
+                                )
+                            })
+                        }
                     </div>
                 </Fade>
             </FadeWrapper>

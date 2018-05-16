@@ -2,14 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import color from 'src/constants/color'
 import Fade from 'react-reveal/Fade'
+import * as data from 'src/constants/data'
 
 const Wrapper = styled.div`
     text-align: center;
     position: relative;
     color: ${color.light};
-`
-
-const FadeWrapper = styled.div`
     transform: translateZ(30px);
 `
 
@@ -49,19 +47,17 @@ const SubTitle = styled.h3`
 
 export default () => {
     return (
-        <Wrapper id={'parallax'}>
-            <FadeWrapper>
-                <Fade left>
-                    <Title>
-                        MY PORTFOLIO
-                    </Title>
-                </Fade>
-                <Fade right>
-                    <SubTitle>
-                        This is my story
-                    </SubTitle>
-                </Fade>
-            </FadeWrapper>
+        <Wrapper>
+            <Fade left>
+                <Title>
+                    { data.header.title }
+                </Title>
+            </Fade>
+            <Fade right>
+                <SubTitle>
+                    { data.header.sub }
+                </SubTitle>
+            </Fade>
         </Wrapper>
     )
 }
