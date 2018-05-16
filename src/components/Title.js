@@ -20,7 +20,7 @@ const Text = styled.h2`
     font-size: 5vw;
     font-weight: 400;
     text-transform: uppercase;
-    background: linear-gradient(to right, #4761ac, #54c2ef);
+    background: linear-gradient(to right, ${color.royal}, ${color.sky});
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     @media only screen and (min-width: 45rem) {

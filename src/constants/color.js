@@ -5,5 +5,7 @@ export default {
     darkBlue: '#283746',
     light: '#C5C6C7',
     azure: '#E7FFFF',
-    orangePeel: '#f09b00'
+    orangePeel: '#F09B00',
+    royal: '#4761AC',
+    sky: '#54C2EF'
 }
