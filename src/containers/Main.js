@@ -11,6 +11,7 @@ import Skills from './Skills'
 import Works from './Works'
 import Contents from './Contents'
 import Activity from './Activity'
+import Footer from './Footer'
 
 const Content = styled.div`
 `
@@ -47,6 +48,7 @@ class Main extends Component {
                                 <Works />
                                 <Contents />
                                 <Activity />
+                                <Footer />
                             </Content>
                         )
                     : false

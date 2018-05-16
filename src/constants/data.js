@@ -22,3 +22,21 @@ export const activity = [
         icon: 'heart'
     },
 ]
+
+export const footer = {
+    powerBy: 'Power By @Passakorn Rattanaprapan',
+    social: [
+        {
+            name: 'facebook',
+            link: 'https://www.facebook.com/passakorn.rattanaparpan'
+        },
+        {
+            name: 'google',
+            link: 'https://plus.google.com/u/0/101611407605791294922'
+        },
+        {
+            name: 'medium',
+            link: 'https://medium.com/@passakornworking'
+        },
+    ]
+}
