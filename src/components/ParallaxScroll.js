@@ -23,6 +23,18 @@ const ImageWrapper = styled.div`
 
 const ImageParallax = styled.img`
     width: 100%;
+    animation: balloon 3s infinite;
+    @keyframes balloon {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-30px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
 `
 
 class ParallaxScroll extends Component {
