@@ -1,9 +1,20 @@
 {
-  "main.js": "static/js/main.d79d813d.js",
-  "main.js.map": "static/js/main.d79d813d.js.map",
-  "static\\media\\cloud-2.svg": "static/media/cloud-2.a784af0f.svg",
+  "main.js": "static/js/main.f040cb2e.js",
+  "main.js.map": "static/js/main.f040cb2e.js.map",
+  "static/js/0.1b7d9091.chunk.js": "static/js/0.1b7d9091.chunk.js",
+  "static/js/0.1b7d9091.chunk.js.map": "static/js/0.1b7d9091.chunk.js.map",
+  "static\\media\\astronaut.svg": "static/media/astronaut.0678fa40.svg",
+  "static\\media\\astronaut_2.svg": "static/media/astronaut_2.e41c9f68.svg",
+  "static\\media\\bg.png": "static/media/bg.7d164925.png",
+  "static\\media\\croptop.png": "static/media/croptop.8cc6a8a1.png",
   "static\\media\\frame.png": "static/media/frame.a6937a78.png",
-  "static\\media\\index.scss": "static/media/index.e6fa4d62.scss",
+  "static\\media\\index.scss": "static/media/index.fc54275d.scss",
   "static\\media\\mario-front.png": "static/media/mario-front.9758ce09.png",
-  "static\\media\\profile.jpg": "static/media/profile.52a85465.jpg"
+  "static\\media\\moon.svg": "static/media/moon.b2792397.svg",
+  "static\\media\\rocket.svg": "static/media/rocket.f0acc446.svg",
+  "static\\media\\shoesshop.png": "static/media/shoesshop.fe95a165.png",
+  "static\\media\\space.svg": "static/media/space.1512faa4.svg",
+  "static\\media\\stars.svg": "static/media/stars.7411f709.svg",
+  "static\\media\\ufo.svg": "static/media/ufo.4199f7e5.svg",
+  "static\\media\\ywc.png": "static/media/ywc.7ac107ed.png"
 }
