@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import styled, { keyframes  } from 'styled-components'
-import color from 'src/constants/color'
+import React from 'react'
+import styled from 'styled-components'
 import PercentageCircle from './PercentageCircle'
 
 const Wrapper = styled.div`

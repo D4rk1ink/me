@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Menu from './Menu'
 import Particle from 'src/components/Particle'
 import BackgroundPNG from 'src/images/bg.png'
 
@@ -36,7 +35,7 @@ const ParticleWrapper = styled.div`
     position: absolute;
 `
 
-class Header extends Component {
+class ParticlePanel extends Component {
 
     constructor (props) {
         super(props)
@@ -67,4 +66,4 @@ class Header extends Component {
     }
 }
 
-export default Header
+export default ParticlePanel

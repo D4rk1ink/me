@@ -11,10 +11,7 @@ const Wrapper = styled(StoryWrapper)`
     overflow: hidden;
 `
 
-const WorkWrapper = styled.div`
-`
-
-class Header extends Component {
+class Works extends Component {
 
     render () {
         return (
@@ -27,4 +24,4 @@ class Header extends Component {
     }
 }
 
-export default Header
+export default Works

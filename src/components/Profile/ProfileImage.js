@@ -1,7 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import Fade from 'react-reveal/Fade'
-import color from 'src/constants/color'
 import ParallaxImage from 'src/components/ParallaxImage'
 import FramePNG from 'src/images/frame.png'
 import FrameShadowPNG from 'src/images/frame-shadow.png'

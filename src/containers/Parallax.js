@@ -1,15 +1,4 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
-import Menu from './Menu'
-import Particle from 'src/components/Particle'
-
-const Wrapper = styled.div`
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    perspective: 4000px;
-    transform-style: preserve-3d;
-`
 
 class Parallax extends Component {
 

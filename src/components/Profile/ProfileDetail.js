@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import color from 'src/constants/color'
 import Fade from 'react-reveal/Fade'

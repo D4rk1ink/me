@@ -11,7 +11,7 @@ const Wrapper = styled(StoryWrapper)`
     overflow: hidden;
 `
 
-class Profile extends Component {
+class Skills extends Component {
 
     render () {
         return (
@@ -24,4 +24,4 @@ class Profile extends Component {
     }
 }
 
-export default Profile
+export default Skills
