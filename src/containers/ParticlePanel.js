@@ -16,6 +16,8 @@ const Wrapper = styled.div`
 
 const BackgroundWrapper = styled.div`
     position: absolute;
+    width: 100vw;
+    height: 100vh;
 `
 
 const BackgroundImage = styled.img`
@@ -23,7 +25,7 @@ const BackgroundImage = styled.img`
 `
 
 const BackgroundOverlay = styled.div`
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 100%;

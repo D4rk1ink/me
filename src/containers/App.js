@@ -12,8 +12,8 @@ class App extends Component {
     render () {
         return (
             <div>
-                <Loading isLoading={this.props.isLoading} />
                 <LoadableComponent />
+                <Loading isLoading={this.props.isLoading} />
             </div>
         )
     }

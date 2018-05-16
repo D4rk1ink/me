@@ -11,10 +11,19 @@ const Wrapper = styled.div`
     align-items: center;
     position: fixed;
     top: 0;
-    
     width: 100vw;
     height: 100vh;
     z-index:999;
+    ${ ({ hide }) => hide ? `animation: hide 1s forwards` : `` };
+    animation-delay: 2s;
+    @keyframes hide {
+        0% {
+            max-height: 100vh;
+        }
+        100% {
+            max-height: 0vh;
+        }
+    }
 `
 
 const Background = styled.div`
@@ -66,7 +75,7 @@ const TextLoading = styled.label`
 
 export default ({ isLoading }) => {
     return (
-        <Wrapper>
+        <Wrapper hide={!isLoading}>
             <Fade collapse when={isLoading}>
                 <Background />
             </Fade>
