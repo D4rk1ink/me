@@ -7,5 +7,6 @@ export default {
     azure: '#E7FFFF',
     orangePeel: '#F09B00',
     royal: '#4761AC',
-    sky: '#54C2EF'
+    sky: '#54C2EF',
+    green: '#00A050'
 }

@@ -33,7 +33,6 @@ const CircularWrapper = styled.svg`
 `
 
 const Path = styled.path`
-    stroke: #4CC790;
     fill: none;
     stroke-width: 3;
     stroke-linecap: round;
@@ -74,9 +73,16 @@ class PercenttageCircle extends Component {
                 <WayPoint onEnter={ () => this.handleEnter() } />
                 <BaseCircle>
                     <CircularWrapper viewBox={'0 0 36 36'}>
+                        <defs>
+                            <linearGradient id={`linear`}>
+                                <stop offset={0}   stop-color={color.royal} />
+                                <stop offset={100} stop-color={color.green} />
+                            </linearGradient>
+                        </defs>
                         <Path animate={this.state.animate} percent={this.props.percent}
                             strokeDasharray={`0, 100`}
                             d={`M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831`}
+                            stroke={`url(#linear)`}
                         />
                     </CircularWrapper>
                 </BaseCircle>
