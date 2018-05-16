@@ -4,6 +4,7 @@ import Media from 'react-media'
 import MenuBar from 'src/components/Menu/MenuBar'
 import MenuPopup from 'src/components/Menu/MenuPopup'
 import MenuButton from 'components/Menu/MenuButton'
+import * as data from 'src/constants/data'
 
 const Wrapper = styled.div`
     @media only screen and (min-width: 75rem) {
@@ -17,10 +18,22 @@ class Menu extends Component {
 
     constructor (props) {
         super(props)
-        this.items = ['PROFILE', 'SKILLS', 'WORKS', 'BLOGS', 'ACTIVITY']
+        this.items = [
+            data.menu.profile,
+            data.menu.skills,
+            data.menu.works,
+            data.menu.contents,
+            data.menu.activity,
+        ]
         this.state = {
             isMenuShow: false
         }
+    }
+
+    scrollTo (id) {
+        document.querySelector(`#${id}`).scrollIntoView({ 
+            behavior: 'smooth' 
+        })
     }
 
     setIsMenuShow (value) {
@@ -38,7 +51,8 @@ class Menu extends Component {
                                     items: this.items,
                                     isMobileSize: true,
                                     isShow: this.state.isMenuShow,
-                                    onClose: this.setIsMenuShow.bind(this)
+                                    onClose: this.setIsMenuShow.bind(this),
+                                    scrollTo: this.scrollTo
                                 }
                                 return (
                                     <div>
@@ -47,7 +61,7 @@ class Menu extends Component {
                                     </div>
                                 )
                             } else {
-                                return <MenuBar items={this.items} />
+                                return <MenuBar items={this.items} scrollTo={this.scrollTo} />
                             }
                         }
                     }

@@ -1,5 +1,13 @@
 import mockMediumAPI from './mockMediumAPI'
 
+export const menu = {
+    profile: 'profile',
+    skills: 'skills',
+    works: 'works',
+    contents: 'contents',
+    activity: 'activity'
+}
+
 export const header = {
     title: 'WEL TO MY WEBSITE',
     sub: 'Let\'s get to know me'

@@ -12,6 +12,7 @@ const Wrapper = styled.div`
 `
 
 const Label = styled.label`
+    text-transform: uppercase;
     cursor: pointer;
 `
 
@@ -39,7 +40,10 @@ export default class MenuItem extends Component {
 
     render () {
         return (
-            <Wrapper onMouseEnter={ () => this.setIsHover(true) } onMouseLeave={ () => this.setIsHover(false) }>
+            <Wrapper
+                onClick={ () => this.props.scrollTo(this.props.title) }
+                onMouseEnter={ () => this.setIsHover(true) }
+                onMouseLeave={ () => this.setIsHover(false) }>
                 <Label>{ this.props.title }</Label>
                 <LineWrapper>
                     <Fade left when={ this.state.isHover }>

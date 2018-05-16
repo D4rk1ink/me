@@ -9,6 +9,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    margin-top: 50px;
 `
 
 const TextWrapper = styled.div`

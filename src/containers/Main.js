@@ -12,6 +12,7 @@ import Works from './Works'
 import Contents from './Contents'
 import Activity from './Activity'
 import Footer from './Footer'
+import * as data from 'src/constants/data'
 
 const Content = styled.div`
 `
@@ -40,14 +41,24 @@ class Main extends Component {
                 {
                     this.state.showContent ?
                         (
-                            <Content>
+                            <Content>                               
                                 <Header />
                                 <Menu />
-                                <Profile />
-                                <Skills />
-                                <Works />
-                                <Contents />
-                                <Activity />
+                                <div id={data.menu.profile}>
+                                    <Profile />
+                                </div>
+                                <div id={data.menu.skills}>
+                                    <Skills />
+                                </div>
+                                <div id={data.menu.works}>
+                                    <Works />
+                                </div>
+                                <div id={data.menu.contents}>
+                                    <Contents />
+                                </div>
+                                <div id={data.menu.activity}>
+                                    <Activity />
+                                </div>
                                 <Footer />
                             </Content>
                         )

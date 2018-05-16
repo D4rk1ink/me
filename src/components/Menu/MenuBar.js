@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     }
 `
 
-export default ({ items }) => {
+export default ({ items, scrollTo }) => {
     return (
         <Wrapper>
             {
@@ -24,7 +24,7 @@ export default ({ items }) => {
                     props[(i % 2 === 0) ? 'top' : 'bottom' ] = true
                     return (
                         <Fade { ...props } key={i}>
-                            <MenuItem title={item} />
+                            <MenuItem title={item} scrollTo={scrollTo} />
                         </Fade>
                     )
                 })

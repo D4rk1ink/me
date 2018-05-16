@@ -60,7 +60,7 @@ class MenuPopup extends Component {
                         return (
                             <Fade { ...props } key={i}>
                                 <MenuItemWrapper onClick={ () => this.props.onClose(false) }>
-                                    <MenuItem title={item} />
+                                    <MenuItem title={item} scrollTo={this.props.scrollTo}/>
                                 </MenuItemWrapper>
                             </Fade>
                         )
