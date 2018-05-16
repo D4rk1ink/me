@@ -10,11 +10,11 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 100%;
     height: 100%;
-    transform: translateZ(30px);
 `
 
 const ContentScroll = styled.div`
     overflow-y: scroll;
+    transform: translateZ(30px);
 `
 
 const ContentItem = styled.div`
@@ -41,7 +41,7 @@ const ContentItem = styled.div`
 
 export default ({ items }) => {
     return (
-        <Wrapper>
+        <Wrapper id={'parallax'}>
             <ContentScroll>
                 <Fade left cascade>
                     <div>
