@@ -48,28 +48,28 @@ export const works = [
         name: 'Anonymock',
         des: '',
         img: require('src/images/anonymock.png'),
-        repo: '',
+        repo: 'https://github.com/D4rk1ink/Anonymock-client',
         tech: 'angular|nodejs|mongodb'
     },
     {
         name: 'YWC15 Announcement',
         des: '',
         img: require('src/images/ywc.png'),
-        repo: '',
+        repo: 'https://github.com/D4rk1ink/ywc15-announcement',
         tech: 'angular|m-firebase'
     },
     {
         name: 'Crop Tops',
         des: '',
         img: require('src/images/croptop.png'),
-        repo: '',
+        repo: 'https://github.com/D4rk1ink/electron-crop-image',
         tech: 'm-electron|react'
     },
     {
         name: 'Shoes E-commerce',
         des: '',
         img: require('src/images/shoesshop.png'),
-        repo: '',
+        repo: 'https://github.com/D4rk1ink/Online-Shoes-E-commerce',
         tech: 'java|mysql'
     }
 ]
