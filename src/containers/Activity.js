@@ -16,7 +16,7 @@ const ActivityWrapper = styled.div`
     flex: unset;
     width: 30vw;
     padding-bottom: 5vw;
-    transform: translateZ(-5vw);
+    transform: translateZ(3vw);
     @media only screen and (min-width: 45rem) {
         flex: 1;
         width: auto;

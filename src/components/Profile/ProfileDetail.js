@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 `
 
 const FadeWrapper = styled.div`
-    transform: translateZ(30px);
+    transform: translateZ(2vw);
 `
 
 const TopicWrapper = styled.div`

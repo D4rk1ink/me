@@ -8,7 +8,10 @@ const Wrapper = styled.div`
     text-align: center;
     position: relative;
     color: ${color.light};
-    transform: translateZ(30px);
+`
+
+const FadeWrapper = styled.div`
+    transform: translateZ(3vw);
 `
 
 const Title = styled.h1`
@@ -47,17 +50,19 @@ const SubTitle = styled.h3`
 
 export default () => {
     return (
-        <Wrapper>
-            <Fade left>
-                <Title>
-                    { data.header.title }
-                </Title>
-            </Fade>
-            <Fade right>
-                <SubTitle>
-                    { data.header.sub }
-                </SubTitle>
-            </Fade>
+        <Wrapper id={'parallax'}>
+            <FadeWrapper>
+                <Fade left>
+                    <Title>
+                        { data.header.title }
+                    </Title>
+                </Fade>
+                <Fade right>
+                    <SubTitle>
+                        { data.header.sub }
+                    </SubTitle>
+                </Fade>
+            </FadeWrapper>
         </Wrapper>
     )
 }
