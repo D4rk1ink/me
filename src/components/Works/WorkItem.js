@@ -71,6 +71,7 @@ const TechList = styled.div`
 const Tech = styled.label`
     margin: 0 10px;
     font-size: 3vw;
+    cursor: pointer;
     &::before {
         background: linear-gradient(to right, ${color.royal}, ${color.sky});
         -webkit-background-clip: text;
@@ -91,7 +92,9 @@ export default ({ item }) => {
             </CircleBorder>
             <TextGroup>
                 <Name>
-                    {item.name}
+                    <a href={item.repo} target={'_blank'}>
+                        {item.name}
+                    </a>
                 </Name>
                 <TechList>
                     {
