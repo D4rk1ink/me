@@ -105,8 +105,8 @@ export const footer = {
             link: 'https://www.facebook.com/passakorn.rattanaparpan'
         },
         {
-            name: 'google',
-            link: 'https://plus.google.com/u/0/101611407605791294922'
+            name: 'github',
+            link: 'https://github.com/D4rk1ink'
         },
         {
             name: 'medium',
